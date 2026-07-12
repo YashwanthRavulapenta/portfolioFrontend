@@ -650,15 +650,17 @@
 
             const result = await response.json();
 
-            if(result.status){
-            setTimeout(async()=>{
-                alert(result.message)
+            if (result.status) {
+                alert(result.message);
+
                 document.getElementById("nameFeild").value = "";
                 document.getElementById("emailFeild").value = "";
                 document.getElementById("subjectFeild").value = "";
                 document.getElementById("textareaFeild").value = "";
-            },1000)
-        }
+            }
+            else {
+                alert(result.message);
+            }
 
 
         });
